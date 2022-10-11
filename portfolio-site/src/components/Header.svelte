@@ -32,6 +32,7 @@
 
   nav {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     --background: rgba(255, 255, 255, 0.7);
   }
@@ -54,18 +55,6 @@
     height: 100%;
   }
 
-  li.active::before {
-    --size: 6px;
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: calc(50% - var(--size));
-    border: var(--size) solid transparent;
-    border-top: var(--size) solid var(--color-theme-1);
-  }
-
   nav a {
     display: flex;
     height: 100%;
@@ -81,6 +70,6 @@
   }
 
   a:hover {
-    color: var(--color-theme-1);
+    color: red;
   }
 </style>

@@ -1,15 +1,19 @@
 <script>
   import "./styles.css";
-  import Header from "./Header.svelte";
+  import Header from "../components/Header.svelte";
 </script>
 
-<Header />
 <div class="app">
   <main>
     <slot />
   </main>
 
-  <footer>
-    <p>stay chill and cool</p>
-  </footer>
+  <footer />
 </div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+  .app {
+    font-family: "Abyssinica SIL", serif;
+  }
+</style>

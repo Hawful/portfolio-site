@@ -1,3 +1,21 @@
+<script lang="ts">
+  import FrameSet from "../../components/FrameSet.svelte";
+  import oliviaHair from "$lib/images/me-and-olivia.jpg";
+  import familyBoat from "$lib/images/family-on-boat.jpg";
+  import oliviaFace from "$lib/images/OliviaFace.jpg";
+
+  let photos = [
+    { id: 1, position: "left", image: oliviaHair, alt: "Olivia and Michael" },
+    { id: 2, position: "center", image: familyBoat, alt: "Family on Boat" },
+    {
+      id: 3,
+      position: "right",
+      image: oliviaFace,
+      alt: "Olivia at top of slide",
+    },
+  ];
+</script>
+
 <svelte:head>
   <title>About</title>
 </svelte:head>
@@ -15,6 +33,7 @@
           experience. When I'm not solving problems, I love to create technical
           content for engineers and tech startups across the globe.
         </p>
+        <FrameSet {photos} />
         <p>
           Creating magic daily on the internet. You can send me an email at <span
             class="info-text">me@michaelhoff.io</span
